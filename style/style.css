@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+body {
+  background-image: url('/img/desktopModeClaro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  body {
+    background-image: url('/img/TabletModeClaro.png');
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url('/img/MobileModeclaro.png');
+  }
+}
+@media (max-width: 600px) {
+  .como-funciona .passos p {
+    font-size: 1.1rem;
+  }
+  .como-funciona .passos p i {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+  .form-container input[type="text"],
+  .form-container input[type="password"],
+  .form-container input[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+
+.txtCatinder {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px  rgba(134, 92, 59, 1);
+}
+.capa {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.216);
+  color: #fff;
+  padding: 1rem;
+}
+.capa::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fff 100%);
+  z-index: 2;
+}
+.capa h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+.capa hr {
+  width: 60px;
+  border: 2px solid #fff;
+  margin-bottom: 0.5rem;
+}
+.capa p {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  margin: 0;
+   margin-top: -0.5rem;
+}
+.conteudo {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+.conteudo h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.conteudo p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+p.linhaHori {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.como-funciona .passos {
+  display: flex;          
+  justify-content: center; 
+  gap: 2rem;           
+  flex-wrap: wrap;        
+}
+.como-funciona .passos p {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;        
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 180px;    
+  max-width: 300px;
+}
+.como-funciona .passos p i {
+  font-size: 1.8rem;
+  color: #a7724f;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #a7724fcd;
+}
+footer {
+  background-color: #e6ccb2;
+  color: #000;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.footer-links,
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #a7724f;
+}
+
+.footer-social a {
+  font-size: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #a7724f;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo i {
+  font-size: 1.5rem;
+  color: #a7724f;
+}
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+.menu a {
+  position: relative;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.menu a:hover {
+  background-color: #a7724f;
+  color: #fff;
+}
+.butaoLogin {
+  background-color: #a7724f;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+.butaoLogin:hover {
+  background-color: #865c3b;
+}
+
+.butaoLogin {
+  background-color: #a7724f;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.butaoLogin:hover {
+  background-color: #865c3b;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.form-container {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.829);
+  padding: 3rem 2rem;
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(134, 92, 59, 1)
+}
+.titulo-login {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff; 
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(203, 20, 20, 0.5);
+  margin-bottom: 1.5rem;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  
+}
+.input-box {
+  position: relative;
+  width: 100%;
+}
+.input-box input {
+  width: 100%;
+  padding: 1.2rem 0.8rem 0.4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+.input-box label {
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: 0.0001rem;
+  left: 0.7rem;
+  font-size: 0.75rem;
+  color: #e6ccb2;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 0.3rem;
+  border-radius: 0.25rem;
+}
+.butaoLogin {
+  padding: 1rem;
+  font-size: 1.25rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #a7724f;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.texto-login {
+  margin-top: 1rem;
+  text-align: center;
+}
+.texto-login a {
+  text-decoration: none;
+}
+.texto-login a:hover {
+  text-decoration: solid underline #e6ccb2;
+}
