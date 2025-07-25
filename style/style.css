@@ -3,13 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body, html {
+html, body {
   height: 100%;
   scroll-behavior: smooth;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 body {
   background-image: url('/img/desktopModeClaro.png');
@@ -36,9 +35,6 @@ body {
   .como-funciona .passos p i {
     font-size: 1.6rem;
   }
-}
-
-@media (max-width: 600px) {
   .form-container {
     padding: 1.5rem;
   }
@@ -49,6 +45,34 @@ body {
   .form-container input[type="password"],
   .form-container input[type="submit"] {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  main.perfilUserStyle {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .perfil,
+  .gatos-adotados {
+    max-width: 100%;
+    max-height: none;
+    flex-basis: 100%;
+  }
+
+  .gatos-container .card-gato {
+    width: 100%;
+  }
+
+  .formulario-contato {
+    flex-direction: column;
+  }
+
+  .formulario-contato textarea,
+  .inputs-texto {
+    flex-basis: auto;
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
@@ -230,7 +254,6 @@ nav {
 .butaoLogin:hover {
   background-color: #865c3b;
 }
-
 .butaoLogin {
   background-color: #a7724f;
   color: #fff;
@@ -239,7 +262,6 @@ nav {
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
 }
-
 .butaoLogin:hover {
   background-color: #865c3b;
 }
@@ -278,8 +300,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  
-  
 }
 .input-box {
   position: relative;
@@ -334,4 +354,248 @@ nav {
 }
 .texto-login a:hover {
   text-decoration: solid underline #e6ccb2;
+}
+#gatos-container {
+  display: flex;
+  flex-wrap: wrap;     
+  gap: 1.5rem;         
+  padding: 1.5rem;
+  justify-content: center; 
+}
+.card-gato {
+  flex: 1 1 calc(25% - 1.5rem); 
+  max-width: 250px;             
+  background: linear-gradient(145deg, #fdf6e3, #a68137);
+  border: 2px solid #865c3b;   
+  box-shadow: 0 8px 16px rgba(134, 92, 59, 0.3); 
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.card-gato:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(134, 92, 59, 0.6);
+}
+.card-gato img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.card-gato h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  color: #5a3e1b;
+}
+.card-gato p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  color: #4a3a1a;
+}
+.card-gato button {
+  margin-top: 1rem;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 20px;
+  background-color: #865c3b;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.card-gato button:hover:not(:disabled) {
+  background-color: #a17851;
+  transform: scale(1.05);
+}
+.card-gato button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+body.sem-fundo {
+  background: linear-gradient(135deg, #FFF8F1 0%, #F6E7D7 100%);
+  color: #5B4636;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main.perfilUserStyle {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+  flex-wrap: nowrap; 
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.perfil {
+  flex: 1 1 300px;
+  max-width: 350px;
+  max-height: 400px; 
+  overflow-y: auto; 
+  background: linear-gradient(145deg, #EBDCCF 0%, #776654 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(91, 70, 54, 0.15);
+  color: #4B3A2F;
+}
+
+.titulo-perfilTutor {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #3F2F24;
+  font-weight: bold;
+  text-align: center;
+}
+
+#gatos-adotados {
+  flex: 2 1 600px;
+  background: linear-gradient(135deg, #F7EDE7 0%, #E8D7CC 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(91, 70, 54, 0.15);
+  color: #4B3A2F;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  max-height: 400px; 
+  overflow-y: auto; 
+}
+.gatos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+.gato-card {
+  width: 140px;
+  background: #FFF4E6;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.gato-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+.formulario-contato {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #F8EFE6 0%, #F0E5D9 100%);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(91, 70, 54, 0.15);
+  color: #5B4636;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: column;
+}
+.inputs-texto {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.inputs-texto input {
+  flex: 1 1 250px;
+  padding: 0.75rem;
+  border: 1px solid #CBB89B;
+  border-radius: 6px;
+  background-color: #FAF5ED;
+  font-size: 1rem;
+}
+.formulario-contato textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #CBB89B;
+  border-radius: 6px;
+  background-color: #FCFAF7;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+}
+.formulario-contato button {
+  align-self: center;
+  background-color: #B9956F;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.formulario-contato button:hover {
+  background-color: #9E7F59;
+}
+.abaixo-contato {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.conscientizacao {
+  flex: 1 1 300px;
+  background: linear-gradient(135deg, #FFF4E6 0%, #EADAC6 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(91, 70, 54, 0.15);
+  color: #5B4636;
+}
+.card-vergatos button {
+  margin-top: 1rem;
+  background-color: #A87143;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.card-vergatos button:hover {
+  background-color: #855F36;
+}
+.doacoes {
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+  background: linear-gradient(145deg, #F3E6D9 0%, #DCC5A7 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(91, 70, 54, 0.15);
+  color: #4B3A2F;
+}
+
+.doacoes button {
+  background-color: #A87143;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.doacoes button:hover {
+  background-color: #855F36;
+}
+
+.pix-info {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #6F573F;
 }
