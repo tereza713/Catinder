@@ -5,72 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Perfil do Tutor - Catinder</title>
   <link rel="stylesheet" href="/style/style.css"/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body class="sem-fundo">
-  <nav>
-    <div class="logo">
-      <a href="/index.html">Catinder</a> <i class="fa-solid fa-shield-cat"></i>
-    </div>
-    <div class="menu">
-      <a href="/index.html">Principal</a>
-      <a href="/pages/adocoes.html">Adoções</a>
-      <a href="/pages/login.html" class="butaoLogin">Sair</a>
-    </div>
-  </nav>
-  <main class="perfilUserStyle">
-     <aside class="perfil">
-      <h2><i class="fa-solid fa-user"></i> Perfil do Tutor</h2>
-      <p><i class="fa-solid fa-id-badge"></i> <strong>Nome:</strong> XXXX XXX XXXXX</p>
-      <p><i class="fa-solid fa-location-dot"></i> <strong>Localização:</strong> XXXXXXXX - XX</p>
-      <p><i class="fa-solid fa-cat"></i> <strong>Gatos Adotados:</strong> XX</p>
-      <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> XXXXXXX@email.com</p>
-      <p><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> (99) 99999-9999</p>
-    </aside>
-    <section id="gatos-adotados" >
-      <h5 class="titulo-perfilTutor"><i class="fa-solid fa-paw"></i> Gatos Adotados</h5>
-      <div class="gatos-container">
-      </div>
-    </section>
-    
-  </main>
-  <section class="formulario-contato">
-         <h2><i class="fa-solid fa-envelope"></i> Contato</h2>
+  <nav class="navbar">
+  <div class="logo">
+    <a href="/index.html">Catinder</a> <i class="fa-solid fa-shield-cat"></i>
+  </div>
 
-    <form>
-      <div class="inputs-texto">
-        <input type="text" placeholder="Seu nome" />
-        <input type="email" placeholder="Seu e-mail" />
+  <div class="menu">
+    <a href="/index.html">Principal</a>
+    <a href="/pages/adocoes.html">Adoções</a>
+    <a href="/pages/login.html" class="butaoLogin">Login</a>
+
+    <label class="switch-mode">
+      <input type="checkbox" id="mode-toggle" />
+      <span class="slider-icons">
+        <i class="fas fa-sun"></i>            
+        <div>_</div>
+        <i class="fas fa-moon"></i>
+      </span>
+    </label>
+  </div>
+</nav>
+  <main class="layout-perfil-tutor">
+  <section class="bloco-perfil">
+    <h2 class="titulo-secao"><i class="fa-solid fa-user"></i> Tutor</h2>
+    <ul class="info-perfil">
+      <br>
+      <p class="linhaHori"></p>
+      <br>
+      <li><i class="fa-solid fa-id-badge"></i> <strong>Nome:</strong> XXXX XXX XXXXX</li>
+      <li><i class="fa-solid fa-location-dot"></i> <strong>Localização:</strong> XXXXXXXX - XX</li>
+      <li><i class="fa-solid fa-cat"></i> <strong>Gatos Adotados:</strong> XX</li>
+      <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> XXXXXXX@email.com</li>
+      <li><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> (99) 99999-9999</li>
+    </ul>
+  </section>
+  <section class="bloco-gatos">
+    <h2 class="titulo-secao"><i class="fa-solid fa-paw"></i> Gatos Adotados</h2>
+    <div class="grade-gatos">
+      <div class="gatos-container" id="gatos-adotados"></div>
+
+    </div>
+  </section>
+  <section class="bloco-contato">
+    <h2 class="titulo-secao"><i class="fa-solid fa-envelope"></i> Fale com o Catinder</h2>
+    <form class="form-contato">
+      <div class="grupo-inputs">
+        <input type="text" placeholder="Seu nome">
+        <input type="email" placeholder="Seu e-mail">
       </div>
-      <textarea placeholder="Escreva sua mensagem..." required></textarea>
-      <button type="submit">Enviar</button>
+      <textarea placeholder="Escreva sua mensagem..."></textarea>
+      <button type="submit" class="btn-enviar">Enviar</button>
     </form>
   </section>
-  <section class="abaixo-contato">
-    <div class="conscientizacao">
-      <h2><i class="fa-solid fa-heart-circle-check"></i> Cuidados</h2>
-    <ul>
+  <section class="bloco-informativo">
+    <div class="card-info">
+      <h3><i class="fa-solid fa-heart-circle-check"></i> Cuidados</h3>
+      <ul>
         <li><a href="#">Alimentação</a></li>
         <li><a href="#">Vacinas essenciais</a></li>
         <li><a href="#">Importância da castração</a></li>
         <li><a href="#">Adoção responsável</a></li>
       </ul>
-      <p>Para mais informações, consulte nosso:</p> <button class="card-vergatos" onclick="location.href='/pages/guiaCuidados.html'">Guia de Cuidados</button>.
+      <p>Para mais informações:</p>
+      <button onclick="location.href='/pages/guiaCuidados.html'" class="btn-guia">Guia de Cuidados</button>
     </div>
-    <div class="conscientizacao card-vergatos">
+
+    <div class="card-info">
       <h3><i class="fa-solid fa-cat"></i> Quer Adotar?</h3>
       <p>Veja todos os gatinhos disponíveis para adoção!</p>
-          <p>Adotar um gato é uma forma incrível de dar um lar cheio de amor para um animal que precisa. Além disso, você ajuda a diminuir o número de gatos abandonados nas ruas.</p>
-      <button onclick="location.href='adocoes.html'">Ver Gatos</button>
+      <p>Adotar é dar uma nova chance e um lar cheio de amor.</p>
+      <button onclick="location.href='/pages/adocoes.html'" class="btn-guia">Ver Gatos</button>
     </div>
   </section>
-  <section class="doacoes">
-    <h2><i class="fa-solid fa-hand-holding-heart"></i></h2>
+  <section class="bloco-doacoes">
+    <h2 class="titulo-secao"><i class="fa-solid fa-hand-holding-heart"></i> Ajude </h2>
     <p>Faça uma doação via PIX e ajude mais gatinhos!</p>
-    <div class="pix-info">PIX: XXXXXXXXXXX</div>
-    <button>Doar Agora</button>
+    <div class="chave-pix">PIX: XXXXXXXXXXX</div>
+    <button class="btn-doar">Doar Agora</button>
   </section>
-  <footer>
+
+</main>
+
+   <footer>
   <div class="footer-links">
     <a href="/pages/quemSomos.html"><i class="fa-solid fa-users"></i> Quem Somos</a>
     <a href="/pages/diretrizesPolitica.html"><i class="fa-solid fa-scale-balanced"></i> Diretrizes & Políticas</a>
@@ -87,5 +106,7 @@
 </footer>
 
   <script type="module" src="/controller/perfil-controller.js"></script>
+  <script type="module" src="/controller/controller.js"></script>
+   <script type="module" src="/controller/modo-escuro.js"></script>
 </body>
 </html>

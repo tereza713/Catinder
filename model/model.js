@@ -95,6 +95,30 @@ export const gatos = [
     adotado: false,
     imagem: "/img/gato2.jpg"
   },
+  {
+    id: 13,
+    nome: "pantera",
+    raca: "Rangdoll",
+    idade: 3,
+    adotado: false,
+    imagem: "/img/gato1.jpg"
+  },
+  {
+    id: 14,
+    nome: "Fluor",
+    raca: "Nao identificado",
+    idade: 8,
+    adotado: false,
+    imagem: "/img/gato2.jpg"
+  },
+  {
+    id: 15,
+    nome: "Python",
+    raca: "Sphynx",
+    idade: 9,
+    adotado: false,
+    imagem: "/img/gato1.jpg"
+  }
 ];
 export function pegarGatosAdotados() {
   return gatos.filter(gato => gato.adotado === true);
